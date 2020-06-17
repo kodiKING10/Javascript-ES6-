@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        
+    </head>
+
+    <body style="background-color:#1a1a1a">
+        <script src="main.js"></script>
+
+        <div class="teste">
+            <button>Adicionar</button>
+            <p>Teste Remove child</p>
+        </div>
+
+        <script>
+            var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+            var aluno = {
+                nome: "henrique",
+                idade: 23,
+                peso: 80.5,
+                humano:true
+            }
+
+            var btnElement = document.querySelector("body div.teste button");
+
+            btnElement.onclick = function() {
+                alert('clicado');
+            }
+
+            //criando elemento
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+
+            var textElement = document.createTextNode('Acessar o site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('body div.teste');
+            containerElement.appendChild(linkElement);
+
+            var removeP = document.querySelector('div.teste p');
+            containerElement.removeChild(removeP);
+        </script>
+    </body>
+</html>
